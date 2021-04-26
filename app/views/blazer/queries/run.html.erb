@@ -20,7 +20,7 @@
         First
         <% @rows = @rows.first(@row_limit) %>
       <% end %>
-      <%= pluralize(@rows.size, "row") %>
+      <%= pluralize(@rows.size, "user") %>
 
       <% @checks.select(&:state).each do |check| %>
         &middot; <small class="check-state <%= check.state.parameterize.gsub("-", "_") %>"><%= link_to check.state.upcase, edit_check_path(check) %></small>
